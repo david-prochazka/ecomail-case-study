@@ -24,7 +24,7 @@
             </ul>
             <ul>
                 <li><a href="{{ route('contacts.index') }}" class="contrast" {{ request()->routeIs('contacts.*') ? 'aria-current=page' : '' }}>Contacts</a></li>
-                <li><a href="#" class="contrast">Import</a></li>
+                <li><a href="{{ route('import.form') }}" class="contrast" {{ request()->routeIs('import.*') ? 'aria-current=page' : '' }}>Import</a></li>
             </ul>
         </nav>
     </header>

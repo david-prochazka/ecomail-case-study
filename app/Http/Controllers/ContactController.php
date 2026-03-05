@@ -13,9 +13,7 @@ class ContactController extends Controller
         $search = $request->input('q');
 
         if ($search) {
-            $query->where('first_name', 'like', "%{$search}%")
-                ->orWhere('last_name', 'like', "%{$search}%")
-                ->orWhere('email', 'like', "%{$search}%");
+            $query->whereFullText(['email', 'first_name', 'last_name'], $search);
         }
 
 
